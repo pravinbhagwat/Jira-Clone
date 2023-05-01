@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="button head">
+        <button class="add">Add Task</button>
+    </div>
+
+    <div class="modal-container">
+        <div class="modal-content">
+
+            <div class="close">
+                <span class="close-button">X</span>
+            </div>
+
+            <form id="add-task-form">
+ 
+                <label for="task-name">Task Name:</label>
+                <input type="text" id="task-name" required />
+      
+                <label for="priority">Priority:</label>
+                <select id="priority" required>
+                  <option value="low">Low</option>
+                  <option value="medium">Medium</option>
+                  <option value="high">High</option>
+                </select>
+      
+                <label for="due-date">Due Date:</label>
+                <input type="date" id="due-date" required />
+      
+                <label for="status">Status:</label>
+                <select id="status" required>
+                  <option value="not-started">Not Started</option>
+                  <option value="in-progress">In Progress</option>
+                  <option value="completed">Completed</option>
+                </select>
+      
+                <div class="button">
+                    <button type="submit" id="add-task-btn">Add Task</button>
+                </div>
+
+              </form>
+            
+        </div>
+    </div>
+
+    <!-- <div class="modal-edit-container">
+      <div class="modal-edit-content">
+
+          <div class="edit-close">
+              <span class="edit-close-button">X</span>
+          </div>
+
+          <form id="edit-task-form">
+
+              <label for="task-name">Task Name:</label>
+              <input type="text" id="edit-task-name" required />
+    
+              <label for="priority">Priority:</label>
+              <select id="priority" required>
+                <option value="low">Low</option>
+                <option value="medium">Medium</option>
+                <option value="high">High</option>
+              </select>
+    
+              <label for="due-date">Due Date:</label>
+              <input type="date" id="due-date" required />
+    
+              <label for="status">Status:</label>
+              <select id="status" required>
+                <option value="not-started">Not Started</option>
+                <option value="in-progress">In Progress</option>
+                <option value="completed">Completed</option>
+              </select>
+    
+              <div class="button">
+                  <button type="submit" id="add-task-btn">Add Task</button>
+              </div>
+
+            </form>
+          
+      </div>
+  </div> -->
+
+    <div class="container">
+        <div class="column">
+          <h3>Not Started</h3>
+          <ul class="task-list" id="not-started">
+
+          </ul>
+        </div>
+        <div class="column">
+          <h3 style="color: #0052cc;">In Progress</h3>
+          <ul class="task-list" id="in-progress"></ul>
+        </div>
+        <div class="column">
+          <h3 style="color: #006644;">Completed</h3>
+          <ul class="task-list" id="completed"></ul>
+        </div>
+      </div>
+
+
+    <script src="./script.js"></script>
+</body>
+</html>
